@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{% block content %}
+
+Ich Artikel Detail
+
+{{artdet}}
+
+{%for lv_art in artikel%}
+
+
+
+{{lv_art.matnr}}
+<br>{{lv_art.maktx_1}}
+{%endfor%}
+
+{% endblock %}

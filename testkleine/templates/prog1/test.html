@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+{% block content %}
+
+<h1>Nabend</h1>
+
+<br> Mein Name ist: {{name}}
+
+<br> Ich bin {{alter}} Jahre alt
+
+<br>
+<form action="create_user" method="post">
+    {%csrf_token%}
+    {{personen_form.as_p}}
+    <button type="submit" class="btn btn-danger">Bestätigen</button>
+</form>
+
+<br>
+
+<a href="{% url "user_list" %}" class="btn btn-primary btn-lg " tabindex="-1" role="button" >Zeige Liste</a>
+<br>
+
+<br>
+<form enctype="multipart/form-data" action="create_artikel" method="post">
+    {%csrf_token%}
+    {{artikel_form.as_p}}
+    <button type="submit" class="btn btn-danger">Bestätigen</button>
+</form>
+
+<br>
+<a href="{% url "artikel_list" %}" class="btn btn-primary btn-lg " tabindex="-1" role="button" >Artikel Liste</a>
+ {% endblock %}

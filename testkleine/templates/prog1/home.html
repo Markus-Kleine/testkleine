@@ -1,0 +1,135 @@
+<br>
+<h1>Erklärungen</h1>
+<div class="accordion" id="accordionExample">
+    <!-- Terminal Befehle -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="h1">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="false" aria-controls="c1">
+              Terminal
+            </button>
+        </h2>
+        <div id="c1" class="accordion-collapse collapse" aria-labelledby="h1" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col col-lg-2">
+                        Server starten
+                    </div>
+                    <div class="col col-lg-10 text-danger">
+                        sudo phyton3 manage.py runserver
+                    </div>
+                    <div class="col col-lg-2">
+                        Tabelle neu
+                    </div>
+                    <div class="col col-lg-10 text-danger">
+                        sudo phyton3 manage.py makemigrations + sudo phyton3 manage.py migrate
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terminal Befehle -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="h2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+              PyCharme und GitHub
+            </button>
+        </h2>
+        <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col col-lg-6 danger">
+                        <b>Achtung</b>
+                    </div>
+                    <div class="col col-lg-6 text-danger">
+                        In PyCharme unten rechts auf Staging und Master achten!!!
+                    </div>
+                    <div class="col col-lg-6">
+                        lokal speichern
+                    </div>
+                    <div class="col col-lg-6 text-danger">
+                        commit
+                    </div>
+                    <div class="col col-lg-6">
+                        Hole von GitHub
+                    </div>
+                    <div class="col col-lg-6 text-danger">
+                        Update
+                    </div>
+                    <div class="col col-lg-6">
+                        Alles aus Commit nach GitHub
+                    </div>
+                    <div class="col col-lg-6 text-danger">
+                        Push
+                    </div>
+                    <div class="col col-lg-6">
+                        Eine Branch von GitHub holen
+                    </div>
+                    <div class="col col-lg-6 text-danger">
+                        Pull
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Einfache Navigation -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="h3">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+                Navigation
+            </button>
+        </h2>
+        <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="row">
+                    <div class="col col-lg-2">
+                        base.thml
+                    </div>
+                    <div class="col col-lg-10 text-danger">
+                        <xmp><a href="{% url "test" %}" class="btn btn-primary btn-lg " tabindex="-1" role="button" >Zeige Test</a></xmp>
+                    </div>
+                    <div class="col col-lg-2">
+                        urls.py
+                    </div>
+                    <div class="col col-lg-10 text-danger">
+                        <xmp>
+                            from django.urls import path
+                            from prog1.views import home, test
+                            urlpatterns = [
+                              path('test', test, name='test'),
+                            ]
+                        </xmp>
+                    </div>
+                    <div class="col col-lg-2">
+                        views.py
+                    </div>
+                    <div class="col col-lg-10 text-danger">
+                        <xmp>
+                            def test(request):
+                                return render(request, "prog1/test.html")
+                        </xmp>
+                    </div>
+                    <div class="col col-lg-2">
+                        test.html
+                    </div>
+                    <div class="col col-lg-10 text-danger">
+                        <pre>
+                            {%templatetag openblock%}extends "base.html"{%templatetag closeblock%}
+                            {%templatetag openblock%} block content {%templatetag closeblock%}
+                              html code..
+                            {%templatetag openblock%} endblock {%templatetag closeblock%}
+
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+ </div>
+
+
+
+

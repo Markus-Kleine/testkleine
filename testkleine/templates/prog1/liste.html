@@ -1,0 +1,63 @@
+{%extends "base.html"%}
+{% block content %}
+
+
+<br>Alle
+<table>
+  <theader>
+      <tr>
+          <th>Vorname</th>
+          <th>Nachname</th>
+      </tr>
+
+  </theader>
+    <tbody>
+    {%for user in users%}
+        <tr>
+            <td>{{user.first_name}}</td>
+            <td>{{user.last_name}}</td>
+        </tr>
+    {%endfor%}
+    </tbody>
+</table>
+
+<br>nur mit alle ga
+<table>
+  <theader>
+      <tr>
+          <th>Vorname</th>
+          <th>Nachname</th>
+      </tr>
+
+  </theader>
+    <tbody>
+    {%for lv_filter in user_filtered%}
+        <tr>
+            <td>{{lv_filter.first_name}}</td>
+            <td>{{lv_filter.last_name}}</td>
+        </tr>
+    {%endfor%}
+    </tbody>
+</table>
+
+<div class="container">
+  <div class="row">
+<div class="col d-flex flex-direction-row ">
+
+
+{%for lv_coc in cocktails%}
+
+<div class="card p-3 m-3 bg-danger" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{lv_coc.strDrink}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{lv_coc.strAlcoholic}}</h6>
+    <p class="card-text"><span title="{{lv_coc.strCategory}}">     {{lv_coc.strCategory|truncatechars:3}} </span></p>
+
+  </div>
+</div>
+
+{%endfor%}
+</div>
+  </div>
+</div>
+{% endblock %}
